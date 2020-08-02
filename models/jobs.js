@@ -2,10 +2,10 @@ const orm = require("../config/orm.js");
 
 const task = {
   all: function (cb) {
-    orm.all("task", function (res) {
+    orm.all("tasks", function (res) {
       cb(res);
     });
   },
 };
 
-moduale.exports = task;
+module.exports = task;
