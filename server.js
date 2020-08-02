@@ -6,15 +6,15 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.use(expressurlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engoin", "handlebars");
+app.set("view engine", "handlebars");
 
-const routes = require("./controllers/jobs.js");
+const routes = require("./controllers/jobsController.js");
 
 app.use(routes);
 
